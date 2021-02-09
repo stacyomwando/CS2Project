@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+    <!--[if IE 9 ]><html class="ie9"><![endif]-->
+    
+<!-- Mirrored from byrushan.com/projects/ma/1-6-1/jquery/dark/form-examples.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 29 May 2018 08:37:38 GMT -->
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>MySEM Sentiment Analyzer</title>
+    
+        <!-- Vendor CSS -->
+        <link href="{{ url_for('static',filename='vendors/bower_components/animate.css/animate.min.css') }}" rel="stylesheet') }}">
+        <link href="{{ url_for('static',filename='vendors/bower_components/sweetalert/dist/sweetalert.css') }}" rel="stylesheet') }}">
+        <link href="{{ url_for('static',filename='vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css') }}" rel="stylesheet') }}">
+        <link href="{{ url_for('static',filename='vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css') }}" rel="stylesheet') }}">
+
+        <link href="vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css') }}" rel="stylesheet">        
+            
+        <!-- CSS -->
+        <link href="{{ url_for('static',filename='css/app_1.min.css') }}" rel="stylesheet">
+        <link href="{{ url_for('static',filename='css/app_2.min.css') }}" rel="stylesheet">
+    </head>
+    
+    <body>
+         <header id="header-alt" class="clearfix">
+            <ul class="h-inner">
+      
+            <li class="hi-logo hidden-xs">
+                    <a class="hi-logo hidden-xs" href="index.html">MySEM Sentiment Analyzer</a>
+                </li>
+             <br> 
+             </ul>   
+           
+            <nav class="ha-menu">
+                <ul>
+                    <li class="active dropdown"><a href="#" data-toggle="dropdown">Home</a></li>
+                    <li>
+                        <a href="results.html">Analyis</a>
+                    </li>
+                </ul>
+            </nav>
+            
+            
+                   
+        </header>
+        <br>
+
+        <section id="main">
+          
+            <section id="content">
+                <div class="container">
+                
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>File Input <small>Input file with reviews in csv format for analysis.</small></h2>
+                        </div>
+                        
+                        <div class="card-body card-padding">
+                            <form role="form" method=post action = "/results">
+                                <div class="form-group fg-line">
+                                    <label for="exampleInputFile">Input File</label>
+                                    <script type="text/javascript" language="javascript">
+                                        function checkfile(sender) {
+                                            var validExts = new Array(".xlsx", ".xls", ".csv");
+                                            var fileExt = sender.value;
+                                            fileExt = fileExt.substring(fileExt.lastIndexOf('.'));
+                                            if (validExts.indexOf(fileExt) < 0) {
+                                              alert("Invalid file selected, valid files are of " +
+                                                       validExts.toString() + " types.");
+                                              return false;
+                                            }
+                                            else return true;
+                                        }
+                                    </script>
+                                    <input type="file" id="file" onchange="checkfile(this);" />
+                                </div>
+                               
+                                
+                                <button type="submit" class="btn btn-default btn-sm m-t-10">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+    
+            </section>
+        </section>
+        
+        <footer id="footer">
+            Copyright &copy; MyCharts Sentiment Analyzer
+            
+        </footer>
+
+        <!-- Page Loader -->
+        <div class="page-loader">
+            <div class="preloader pls-white">
+                <svg class="pl-circular" viewBox="25 25 50 50">
+                    <circle class="plc-path" cx="50" cy="50" r="20" />
+                </svg>
+
+                <p>Please wait...</p>
+            </div>
+        </div>
+
+        
+        <script src="{{ url_for('static',filename='vendors/bower_components/jquery/dist/jquery.min.js') }}"></script>
+        <script src="{{ url_for('static',filename='vendors/bower_components/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+        <script src="{{ url_for('static',filename='vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js') }}"></script>
+        <script src="{{ url_for('static',filename='vendors/bower_components/Waves/dist/waves.min.js') }}"></script>
+        <script src="{{ url_for('static',filename='vendors/bootstrap-growl/bootstrap-growl.min.js') }}"></script>
+        <script src="{{ url_for('static',filename='vendors/bower_components/sweetalert/dist/sweetalert.min.js') }}"></script>
+       
+        <script src="{{ url_for('static',filename='vendors/bower_components/autosize/dist/autosize.min.js') }}"></script>
+
+        
+        <!-- Placeholder for IE9 -->
+        <!--[if IE 9 ]>
+            <script src="vendors/bower_components/jquery-placeholder/jquery.placeholder.min.js"></script>
+        <![endif]-->
+
+        <script src="{{ url_for('static',filename='js/app.min.js')}}"></script>
+        <script type="text/javascript" language="javascript">
+            function checkfile(sender) {
+                var validExts = new Array(".xlsx", ".xls", ".csv");
+                var fileExt = sender.value;
+                fileExt = fileExt.substring(fileExt.lastIndexOf('.'));
+                if (validExts.indexOf(fileExt) < 0) {
+                  alert("Invalid file selected, valid files are of " +
+                           validExts.toString() + " types.");
+                  return false;
+                }
+                else return true;
+            }
+        </script>
+
+
+    </body>
+
+<!-- Mirrored from byrushan.com/projects/ma/1-6-1/jquery/dark/form-examples.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 29 May 2018 08:37:38 GMT -->
+</html>

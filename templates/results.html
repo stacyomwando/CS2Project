@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<!--[if IE 9 ]><html class="ie9"><![endif]-->
+    
+<!-- Mirrored from byrushan.com/projects/ma/1-6-1/jquery/dark/top-mainmenu.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 29 May 2018 08:37:36 GMT -->
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>MySEM Sentiment Analyzer</title>
+
+        <!-- Vendor CSS -->
+        <link href="vendors/bower_components/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet">
+        <link href="vendors/bower_components/animate.css/animate.min.css" rel="stylesheet">
+        <link href="vendors/bower_components/sweetalert/dist/sweetalert.css" rel="stylesheet">
+        <link href="vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
+        <link href="vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+
+        <!-- CSS -->
+        <link href="{{ url_for('static',filename='css/app_1.min.css') }}" rel="stylesheet">
+        <link href="{{ url_for('static',filename='css/app_2.min.css') }}" rel="stylesheet">
+
+    </head>
+    <body>
+        <header id="header-alt" class="clearfix">
+             <ul class="h-inner">
+      
+            <li class="hi-logo hidden-xs">
+                    <a class="hi-logo hidden-xs" href="index.html">MySEM Sentiment Analyzer</a>
+                </li>
+             <br> 
+             </ul>   
+           
+            <nav class="ha-menu">
+                <ul>
+                    <li><a href="reviewform.html">Home</a></li>
+                    <li class="active dropdown">
+                        <a href="#" data-toggle="dropdown">Analyis</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="main">
+          
+            <section id="content" class="content-alt">
+                <div class="container">
+                   
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>Data Analytics <small>Analysis of the data file given as iput</small></h2>
+
+                            
+                        </div>
+
+                        <div class="card-body">
+                            <div class="chart-edge">
+                                <div id="curved-line-chart" class="flot-chart "></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mini-charts">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-3">
+                                <div class="mini-charts-item">
+                                    <div class="clearfix">
+                                        <div class="chart stats-bar"></div>
+                                        <div class="count">
+                                            <small>Website Traffics</small>
+                                            <h2>987,459</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-md-3">
+                                <div class="mini-charts-item">
+                                    <div class="clearfix">
+                                        <div class="chart stats-line"></div>
+                                        <div class="count">
+                                            <small>Total Sales</small>
+                                            <h2>$ 458,778</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-md-3">
+                                <div class="mini-charts-item">
+                                    <div class="clearfix">
+                                        <div class="chart stats-bar-2"></div>
+                                        <div class="count">
+                                            <small>Website Impressions</small>
+                                            <h2>356,785K</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-md-3">
+                                <div class="mini-charts-item card">
+                                    <div class="clearfix">
+                                        <div class="chart stats-line-2"></div>
+                                        <div class="count">
+                                            <small>Support Tickets</small>
+                                            <h2>23,856</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dash-widgets">
+                        <div class="row">
+                            <div class="col-md-4 col-sm-6">
+                                <div id="site-visits" class="dash-widget-item">
+                                    <div class="dw-item">
+                                        <div class="dwi-header">
+                                            <div class="p-30">
+                                                <div class="dash-widget-visits"></div>
+                                            </div>
+
+                                            <div class="dwih-title">For the past 30 days</div>
+                                        </div>
+
+                                        <div class="list-group lg-even-white">
+                                            <div class="list-group-item media sv-item">
+                                                <div class="pull-right">
+                                                    <div class="stats-bar"></div>
+                                                </div>
+                                                <div class="media-body">
+                                                    <small>Page Views</small>
+                                                    <h3>47,896,536</h3>
+                                                </div>
+                                            </div>
+
+                                            <div class="list-group-item media sv-item">
+                                                <div class="pull-right">
+                                                    <div class="stats-bar-2"></div>
+                                                </div>
+                                                <div class="media-body">
+                                                    <small>Site Visitors</small>
+                                                    <h3>24,456,799</h3>
+                                                </div>
+                                            </div>
+
+                                            <div class="list-group-item media sv-item">
+                                                <div class="pull-right">
+                                                    <div class="stats-line"></div>
+                                                </div>
+                                                <div class="media-body">
+                                                    <small>Total Clicks</small>
+                                                    <h3>13,965</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 col-sm-6">
+                                <div id="pie-charts" class="dash-widget-item">
+                                    <div class="dw-item">
+                                        <div class="dwi-header">
+                                            <div class="dwih-title">Email Statistics</div>
+                                        </div>
+
+                                        <div class="clearfix"></div>
+
+                                        <div class="text-center p-20 m-t-25">
+                                            <div class="easy-pie main-pie" data-percent="75">
+                                                <div class="percent">45</div>
+                                                <div class="pie-title">Total Emails Sent</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="p-t-25 p-b-20 text-center">
+                                            <div class="easy-pie sub-pie-1" data-percent="56">
+                                                <div class="percent">56</div>
+                                                <div class="pie-title">Bounce Rate</div>
+                                            </div>
+                                            <div class="easy-pie sub-pie-2" data-percent="84">
+                                                <div class="percent">84</div>
+                                                <div class="pie-title">Total Opened</div>
+                                            </div>
+                                            <div class="easy-pie sub-pie-2" data-percent="21">
+                                                <div class="percent">21</div>
+                                                <div class="pie-title">Total Ignored</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 col-sm-6">
+                                <div class="dw-item">
+                                    <div id="weather-widget"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            
+                </div>
+            </section>
+        </section>
+
+        <footer id="footer">
+            Copyright &copy; MySEM Sentiment Analyzer
+        </footer>
+
+        <!-- Page Loader -->
+        <div class="page-loader">
+            <div class="preloader pls-white">
+                <svg class="pl-circular" viewBox="25 25 50 50">
+                    <circle class="plc-path" cx="50" cy="50" r="20" />
+                </svg>
+
+                <p>Please wait...</p>
+            </div>
+        </div>
+
+        <!-- Javascript Libraries -->
+        <script src="vendors/bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <script src="vendors/bower_components/flot/jquery.flot.js"></script>
+        <script src="vendors/bower_components/flot/jquery.flot.resize.js"></script>
+        <script src="vendors/bower_components/flot.curvedlines/curvedLines.js"></script>
+        <script src="vendors/sparklines/jquery.sparkline.min.js"></script>
+        <script src="vendors/bower_components/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
+
+        <script src="vendors/bower_components/moment/min/moment.min.js"></script>
+        <script src="vendors/bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
+        <script src="vendors/bower_components/simpleWeather/jquery.simpleWeather.min.js"></script>
+        <script src="vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="vendors/bower_components/Waves/dist/waves.min.js"></script>
+        <script src="vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
+        <script src="vendors/bower_components/sweetalert/dist/sweetalert.min.js"></script>
+
+        <!-- Placeholder for IE9 -->
+        <!--[if IE 9 ]>
+            <script src="vendors/bower_components/jquery-placeholder/jquery.placeholder.min.js"></script>
+        <![endif]-->
+
+        <script src="{{ url_for('static',filename='js/app.min.js')}"></script>
+    </body>
+  
+<!-- Mirrored from byrushan.com/projects/ma/1-6-1/jquery/dark/top-mainmenu.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 29 May 2018 08:37:36 GMT -->
+</html>
